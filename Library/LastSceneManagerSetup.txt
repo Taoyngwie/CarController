@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/SampleScene.unity
+- path: Assets/Vuplex/WebView/Demos/Scenes/1_SimpleWebViewDemo.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

@@ -4,6 +4,16 @@ ScriptsOnlyBuild:
     - ControllerSystem
     - DataBase
     - FixedJoystick
+    - Vuplex.WebView.CanvasKeyboard
+    - Vuplex.WebView.CanvasPointerInputDetector
+    - Vuplex.WebView.CanvasWebViewPrefab
+    - Vuplex.WebView.DefaultPointerInputDetector
+    - Vuplex.WebView.Demos.CameraRotator
+    - Vuplex.WebView.Demos.SimpleWebViewDemo
+    - Vuplex.WebView.Internal.CanvasViewportMaterialView
+    - Vuplex.WebView.Internal.ViewportMaterialView
+    - Vuplex.WebView.Keyboard
+    - Vuplex.WebView.WebViewPrefab
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.Graphs.dll:
@@ -18,12 +28,15 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.PhysicsRaycaster
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.RawImage
+    - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/Vuplex/WebView/Demos/Scenes/1_SimpleWebViewDemo.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -57,22 +70,50 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1438}
+      Script: {instanceID: 1458}
     - Class: 114
-      Script: {instanceID: 1668}
+      Script: {instanceID: 1460}
     - Class: 114
-      Script: {instanceID: 1946}
+      Script: {instanceID: 1462}
     - Class: 114
-      Script: {instanceID: 2322}
+      Script: {instanceID: 1610}
     - Class: 114
-      Script: {instanceID: 2434}
+      Script: {instanceID: 1680}
     - Class: 114
-      Script: {instanceID: 2602}
+      Script: {instanceID: 1708}
     - Class: 114
-      Script: {instanceID: 2796}
+      Script: {instanceID: 2004}
     - Class: 114
-      Script: {instanceID: 3550}
+      Script: {instanceID: 2086}
+    - Class: 114
+      Script: {instanceID: 2092}
+    - Class: 114
+      Script: {instanceID: 2380}
+    - Class: 114
+      Script: {instanceID: 2424}
+    - Class: 114
+      Script: {instanceID: 2540}
+    - Class: 114
+      Script: {instanceID: 2608}
+    - Class: 114
+      Script: {instanceID: 2702}
+    - Class: 114
+      Script: {instanceID: 2724}
+    - Class: 114
+      Script: {instanceID: 2972}
+    - Class: 114
+      Script: {instanceID: 3044}
+    - Class: 114
+      Script: {instanceID: 3660}
+    - Class: 114
+      Script: {instanceID: 3752}
+    - Class: 114
+      Script: {instanceID: 4016}
+    - Class: 114
+      Script: {instanceID: 4826}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -86,13 +127,29 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
+    - Class: 258
+      Script: {instanceID: 0}
+    - Class: 850595691
+      Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: 748dd2a2a28da4e618912da5ac45684b
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.EventSystems
+    className: StandaloneInputModule
   - hash:
       serializedVersion: 2
       Hash: a6e561615949734e9f12f9b61661f43e
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Image
+  - hash:
+      serializedVersion: 2
+      Hash: c1d728126ff1918728036c59106d32b2
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: RawImage
   - hash:
       serializedVersion: 2
       Hash: 824e8d4cb47ffd88ddf959dbd4526585
@@ -119,6 +176,12 @@ ScriptsOnlyBuild:
     className: SignalAsset
   - hash:
       serializedVersion: 2
+      Hash: 201a1d746cd749222c9771b5ede1b2bc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Vuplex.WebView
+    className: WebViewPrefab
+  - hash:
+      serializedVersion: 2
       Hash: bcaee4c2a83047257b5f47d6ed264b75
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -141,6 +204,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Slider
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Vuplex.WebView
+    className: CanvasPointerInputDetector
   - hash:
       serializedVersion: 2
       Hash: 3164bc883ff663a5cdb32d1ef7e7c0c5
@@ -199,6 +268,12 @@ ScriptsOnlyBuild:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
+    namespaceName: Vuplex.WebView
+    className: DefaultPointerInputDetector
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
     namespaceName: Proyecto26.Helper
     className: ExecuteOnMainThread
   - hash:
@@ -215,10 +290,22 @@ ScriptsOnlyBuild:
     className: PlaymodeTestsController
   - hash:
       serializedVersion: 2
-      Hash: c1d728126ff1918728036c59106d32b2
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: RawImage
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Vuplex.WebView.Internal
+    className: ThreadDispatcher
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Vuplex.WebView.Internal
+    className: NativeKeyboardListener
+  - hash:
+      serializedVersion: 2
+      Hash: ce95044e80f31f8e15d045747eb916a1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Vuplex.WebView
+    className: Keyboard
   - hash:
       serializedVersion: 2
       Hash: a1aa98c78061c6f03a8c124cda576e67
@@ -263,6 +350,24 @@ ScriptsOnlyBuild:
     className: TextMeshProUGUI
   - hash:
       serializedVersion: 2
+      Hash: ca7455fb87145f22d261dbfaf15544d6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Vuplex.WebView.Demos
+    className: CameraRotator
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Vuplex.WebView
+    className: MockWebView
+  - hash:
+      serializedVersion: 2
+      Hash: ce95044e80f31f8e15d045747eb916a1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Vuplex.WebView
+    className: CanvasKeyboard
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestRunner.Utils
@@ -305,12 +410,6 @@ ScriptsOnlyBuild:
     className: JoystickSetterExample
   - hash:
       serializedVersion: 2
-      Hash: 748dd2a2a28da4e618912da5ac45684b
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.EventSystems
-    className: StandaloneInputModule
-  - hash:
-      serializedVersion: 2
       Hash: f7858108331b563fb41b80b729297acd
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -329,6 +428,12 @@ ScriptsOnlyBuild:
     className: MarkerTrack
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Vuplex.WebView.Internal
+    className: CanvasViewportMaterialView
+  - hash:
+      serializedVersion: 2
       Hash: 8e6ceabfd38a184413d69b7db56c89cc
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
@@ -345,6 +450,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Button
+  - hash:
+      serializedVersion: 2
+      Hash: 614cd7fc5c856f5fbcef352b65570947
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Vuplex.WebView
+    className: CanvasWebViewPrefab
   - hash:
       serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
@@ -369,6 +480,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: User
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Vuplex.WebView.Demos
+    className: CanvasWebViewDemo
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -425,6 +542,12 @@ ScriptsOnlyBuild:
     className: PositionAsUV1
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Vuplex.WebView.Demos
+    className: AdvancedWebViewDemo
+  - hash:
+      serializedVersion: 2
       Hash: 87ff43d2baf3385cba327d8f803a4ebb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -447,6 +570,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: FloatingJoystick
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Vuplex.WebView.Demos
+    className: SimpleWebViewDemo
   - hash:
       serializedVersion: 2
       Hash: a81d4c2c1cf3ad164d277d927a193679
@@ -529,6 +658,12 @@ ScriptsOnlyBuild:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
+    namespaceName: Vuplex.WebView.Demos
+    className: PopupDemo
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MainScript
   - hash:
@@ -537,6 +672,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: JoystickPlayerExample
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Vuplex.WebView.Internal
+    className: KeyboardManager
   - hash:
       serializedVersion: 2
       Hash: 6980e81ddc615a861309d2d659cc3760
@@ -557,6 +698,12 @@ ScriptsOnlyBuild:
     className: TMP_ScrollbarEventHandler
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Vuplex.WebView.Demos
+    className: CanvasWorldSpaceDemo
+  - hash:
+      serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -569,6 +716,18 @@ ScriptsOnlyBuild:
     className: ActivationPlayableAsset
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Vuplex.WebView.Internal
+    className: VulkanDelayedTextureDestroyer
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Vuplex.WebView.Demos
+    className: CanvasPopupDemo
+  - hash:
+      serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -579,7 +738,13 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Vuplex.WebView.Internal
+    className: ViewportMaterialView
   platform: 13
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
+  - Assets/Vuplex/WebView/Demos/Scenes/1_SimpleWebViewDemo.unity
   playerPath: D:/Destop/game_project/CarController/car.apk
